@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Search Results{% endblock %}
+
+{% block content %}
+<h2 class="mb-4 text-center">🖼 Results for "{{ query }}"</h2>
+
+<div class="row g-4">
+    {% for img_url in images %}
+    <div class="col-md-4 col-lg-3">
+        <div class="card shadow-sm h-100">
+            <img src="{{ img_url }}" class="card-img-top img-fluid" alt="Image">
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<div class="text-center mt-4">
+    <a href="/" class="btn btn-secondary btn-lg">🔄 New Search</a>
+</div>
+{% endblock %}
